@@ -20,11 +20,11 @@ func maxProfit(prices []int) int {
 func maxProfitOptimized(prices []int) int {
 	smallestPrice := prices[0]
 	maximizedProfit := 0
-	for i := 0; i < len(prices); i++ {
+	for i, _ := range prices {
 		if prices[i] < smallestPrice {
 			smallestPrice = prices[i]
-		} else if (prices[i] - smallestPrice) > maximizedProfit {
-			maximizedProfit = prices[i] - smallestPrice
+		} else if currentProfit := prices[i] - smallestPrice; currentProfit > maximizedProfit {
+			maximizedProfit = currentProfit
 		}
 	}
 	return maximizedProfit
