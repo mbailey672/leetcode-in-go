@@ -43,3 +43,5 @@ func main() {
 	fmt.Println(twoSum(numArray, 9))
 	fmt.Println(twoSumHashmap(numArray, 9))
 }
+
+//useless comment so i can make the commit description nice
